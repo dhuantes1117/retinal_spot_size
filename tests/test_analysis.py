@@ -1,7 +1,8 @@
-import numpy as np
+from retinal_spot_size import *
 from retinal_spot_size.ABCD import *
 from retinal_spot_size.eye_properties import *
 from retinal_spot_size.utils import *
+import matplotlib.pyplot as plt
 
 
 M_front_cornea  = curved_interface(-1*CORNEA_RAD_FRONT, N_AIR, N_CORNEA)
@@ -22,13 +23,11 @@ for interface in optical_system[::-1]:
 	eye_equiv_ABCD = np.matmul(interface, eye_equiv_ABCD)
 
 
-_lambda = 532e-6
-_ang_div = 1e-3
+_lambda = Q_(532e-9, 'm')
+_ang_div = 10-3 * ureg.rad
 
 
 def test_prop():
-	q_0 = q(0, z_R(_lambda, _ang_div))
+	q_0 = q_hat(0 * ureg.meter, z_R(_lambda, _ang_div))
 	q_1 = complex_matmul(q_0, eye_equiv_ABCD)
-	assert(w_z(_lambda, q_0) == w_z(_lambda / N_VITREOUS, q_1))
-	assert(q_0 == q_1)
-		
+

@@ -11,7 +11,12 @@ python = ">=3.10,<3.12"
 pytest = "^7.2.1"
 numpy = "^1.24.1"
 scipy = "^1.10.0"
+matplotlib = "^3.6.3"
+typer = "^0.7.0"
+pint = "^0.20.1"
 
+[tool.poetry.scripts]
+rss = "retinal_spot_size.cli:app"
 
 [build-system]
 requires = ["poetry-core"]
