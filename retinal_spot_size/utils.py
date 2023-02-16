@@ -22,9 +22,9 @@ def propagate_q_hat(q_hat, System_Matrix):
 	return complex_matmul(q_hat, System_Matrix)
 
 @ureg.wraps(ureg.meter, [ureg.meter, ureg.meter])
-def current_beam_rad(lambda_, q):
-	Imag = np.imag(1 / q)
-	waist_sq = -lambda_ / Imag / pi
+def current_beam_rad(lambda_, q_hat):
+	Imag = np.imag(1 / q_hat)
+	waist_sq = -lambda_ / pi / Imag
 	return np.sqrt(waist_sq)
 
 @ureg.wraps(ureg.meter, [ureg.meter, ureg.rad])
