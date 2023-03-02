@@ -6,36 +6,41 @@ def complex_matmul(q_hat, M):
 	B = Q_(M[0, 1], 'm')
 	C = Q_(M[1, 0], 'm^-1')
 	D = M[1, 1]
-	assert(q_hat.units == ureg.meter)
+	assert(q_hat.check('[length]'))
 	NUM = A * q_hat + B
 	DEN = C * q_hat + D
 	q_prime = NUM / DEN
-	assert(q_prime.units == ureg.meter)
+	assert(q_prime.check('[length]'))
 	return q_prime
 
-@ureg.wraps(ureg.meter, [ureg.meter, ureg.meter, None])
+@ureg.wraps(ureg.meter, (ureg.meter, ureg.meter, None))
 def q_hat(z, _z_R, n=1):
 	return z + 1j*_z_R / n
 
 def propagate_q_hat(q_hat, System_Matrix):
-	assert(q_hat.units == ureg.meter)
+	assert(q_hat.check('[length]'))
 	return complex_matmul(q_hat, System_Matrix)
 
-@ureg.wraps(ureg.meter, [ureg.meter, ureg.meter])
+@ureg.wraps(ureg.meter, (ureg.meter, ureg.meter))
 def current_beam_rad(lambda_, q_hat):
 	Imag = np.imag(1 / q_hat)
 	waist_sq = -lambda_ / pi / Imag
 	return np.sqrt(waist_sq)
 
-@ureg.wraps(ureg.meter, [ureg.meter, ureg.rad])
+@ureg.wraps(ureg.meter, (None, ureg.meter))
+def current_beam_roc(n, q_hat):
+	real_ = np.real(n / q_hat)
+	return 1 / real_
+
+@ureg.wraps(ureg.meter, (ureg.meter, ureg.rad))
 def z_R(lambda_, div):
 	return lambda_ / pi / div**2
 
-@ureg.wraps(ureg.rad, [ureg.meter, ureg.meter])
+@ureg.wraps(ureg.rad, (ureg.meter, ureg.meter))
 def ang_div(_lambda, waist):
 	return _lambda / pi / waist
 
-@ureg.wraps(None, [None, None, None, ureg.um**2, ureg.um**2, ureg.um**2, ureg.um])
+@ureg.wraps(None, (None, None, None, ureg.um**2, ureg.um**2, ureg.um**2, ureg.um))
 def sellmeier_true(B1, B2, B3, C1, C2, C3, _lambda):
 	T0 = 1
 	T1 = B1 * _lambda**2 / (_lambda**2 - C1) 

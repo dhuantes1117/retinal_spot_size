@@ -1,0 +1,4 @@
+#! /bin/bash
+git remote add origin http://fermi.fhsu.edu:81/CD3/retinal-image-size.git
+git branch -M main
+git push -uf origin main

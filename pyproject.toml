@@ -14,6 +14,7 @@ scipy = "^1.10.0"
 matplotlib = "^3.6.3"
 typer = "^0.7.0"
 pint = "^0.20.1"
+pytest-pudb = "^0.7.0"
 
 [tool.poetry.scripts]
 rss = "retinal_spot_size.cli:app"
