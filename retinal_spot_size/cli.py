@@ -35,7 +35,7 @@ def rss_figure_8():
 	for _lambda in _lambda_range:
 		_ang_div = ang_div(_lambda, beam_waist)
 		q_0 = q_hat(z0, z_R(_lambda, _ang_div))
-		q_1 = propagate_q_hat(q_0, reduced_eye(_lambda, 6.185 * ureg.mm))
+		q_1 = propagate_q_hat(q_0, reduced_eye(_lambda, 6.1 * ureg.mm))
 		#print(f"{_lambda} {q_1}")
 		retinal_roc = current_beam_roc(N_VITREOUS, q_1)
 		retinal_rad = current_beam_rad(_lambda / N_VITREOUS, q_1)
@@ -47,8 +47,8 @@ def rss_figure_8():
 	# qualitatively fit what is happening, so the question is: What is
 	# causing our function to have this issue?
 	#plt.plot(-0.35 * (_lambda_range.magnitude - 11600), radius_list * 0.1)		
-	# plt.plot(_lambda_range.magnitude, radius_list)		
-	plt.plot(_lambda_range.magnitude, roc_list)		
+	plt.plot(_lambda_range.magnitude, radius_list)		
+	# plt.plot(_lambda_range.magnitude, roc_list)		
 	plt.title("retinal radius as function of wavelength, waist size %f %s" %(beam_waist.magnitude, beam_waist.units))
 	plt.xlabel("wavelength, (%s)" %(_lambda_range.units))
 	plt.ylabel("retinal radius, (%s)" %(retinal_rad.units))
