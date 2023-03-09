@@ -6,6 +6,7 @@ import typer
 import pathlib
 import json
 import matplotlib.pyplot as plt
+from scipy.interpolate import CubicSpline as interp
 
 
 app = typer.Typer()
@@ -38,7 +39,7 @@ def rss_figure_8():
 		q_1 = propagate_q_hat(q_0, reduced_eye(_lambda, 6.1 * ureg.mm))
 		#print(f"{_lambda} {q_1}")
 		retinal_roc = current_beam_roc(N_VITREOUS, q_1)
-		retinal_rad = current_beam_rad(_lambda / N_VITREOUS, q_1)
+		retinal_rad = current_beam_rad(_lambda, q_1)
 		retinal_rad.ito("um")
 		radius_list.append(retinal_rad.magnitude)
 		roc_list.append(retinal_roc.magnitude)
@@ -53,6 +54,7 @@ def rss_figure_8():
 	plt.xlabel("wavelength, (%s)" %(_lambda_range.units))
 	plt.ylabel("retinal radius, (%s)" %(retinal_rad.units))
 	plt.show()
+	print(interp(_lambda_range.magnitude, 2 * radius_list)(1300 * ureg.nm))
 
 
 @app.command()

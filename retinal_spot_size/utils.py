@@ -28,15 +28,18 @@ def current_beam_rad(lambda_, q_hat):
 	waist_sq = -lambda_ / pi / Imag
 	return np.sqrt(waist_sq)
 
+# IS THIS 1 / e or 1 / e**2
 @ureg.wraps(ureg.meter, (None, ureg.meter))
 def current_beam_roc(n, q_hat):
 	real_ = np.real(n / q_hat)
 	return 1 / real_
 
+# 1 / e**2
 @ureg.wraps(ureg.meter, (ureg.meter, ureg.rad))
 def z_R(lambda_, div):
 	return lambda_ / pi / div**2
 
+# 1 / e**2
 @ureg.wraps(ureg.rad, (ureg.meter, ureg.meter))
 def ang_div(_lambda, waist):
 	return _lambda / pi / waist
