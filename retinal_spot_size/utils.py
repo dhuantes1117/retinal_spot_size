@@ -21,6 +21,7 @@ def propagate_q_hat(q_hat, System_Matrix):
 	assert(q_hat.check('[length]'))
 	return complex_matmul(q_hat, System_Matrix)
 
+# IS THIS 1 / e or 1 / e**2
 @ureg.wraps(ureg.meter, (ureg.meter, ureg.meter))
 def current_beam_rad(lambda_, q_hat):
 	Imag = np.imag(1 / q_hat)

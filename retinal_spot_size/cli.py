@@ -24,9 +24,9 @@ def rss_figure_8():
 	_lambda_upper_bound = Q_(10400, 'nm')
 	_lambda_lower_bound = Q_(400, 'nm')
 	_lambda_upper_bound = Q_(1400, 'nm')
-	_lambda_range = np.linspace(_lambda_lower_bound, _lambda_upper_bound, 100)
+	_lambda_range = np.linspace(_lambda_lower_bound, _lambda_upper_bound, 101)
 	z0 = Q_(0, 'm')
-	beam_waist = Q_(4.24, 'mm')
+	beam_waist = Q_(4.24 / 2, 'mm')
 
 	print(eye_equiv_ABCD(Q_(700, 'nm')))
 	radius_list = []
@@ -47,7 +47,7 @@ def rss_figure_8():
 	# qualitatively fit what is happening, so the question is: What is
 	# causing our function to have this issue?
 	#plt.plot(-0.35 * (_lambda_range.magnitude - 11600), radius_list * 0.1)		
-	plt.plot(_lambda_range.magnitude, radius_list)		
+	plt.plot(_lambda_range.magnitude, 2 * radius_list)		
 	# plt.plot(_lambda_range.magnitude, roc_list)		
 	plt.title("retinal radius as function of wavelength, waist size %f %s" %(beam_waist.magnitude, beam_waist.units))
 	plt.xlabel("wavelength, (%s)" %(_lambda_range.units))
