@@ -2,6 +2,23 @@ from retinal_spot_size import *
 from .eye_properties import *
 
 def complex_matmul(q_hat, M):
+	"""
+	preforms the calculation of the change in reduced complex beam parameter
+	following propagation through an optical system represented by ABCD matrix 'M'.
+
+	Parameters
+	-----------
+	q_hat: 	Quantity
+			The reduced complex beam parameter of the incoming beam, expressed in units of length.
+	M: 		None
+			Unitless ABCD matrix representing the optical system of interest.
+
+	Returns
+	----------
+	Quantity
+		The reduced complex beam parameter of the outgoing beam, expressed in units of length.
+
+	"""
 	A = M[0, 0]
 	B = Q_(M[0, 1], 'm')
 	C = Q_(M[1, 0], 'm^-1')
@@ -15,6 +32,23 @@ def complex_matmul(q_hat, M):
 
 @ureg.wraps(ureg.meter, (ureg.meter, ureg.meter, None))
 def q_hat(z, _z_R, n=1):
+	"""
+	function for generating reduced complex beam parameters
+	
+	Parameters
+	-----------
+	z: 		Quantity
+			The displacement from the beam waist in the propagation direction, expressed in units of length
+	_z_R: 	Quantity
+			The rayleigh range for the beam, expressed in units of length
+	n:		Quantity, default=1
+			The refractive index of the media the beam is in as a unitless Quantity OR a float (default value indicates propagation in air, or vaccuum)
+			
+	Returns
+	----------
+	Quantity
+		The reduced complex beam parameter of the beam at the present location
+	"""
 	return z + 1j*_z_R / n
 
 def propagate_q_hat(q_hat, System_Matrix):

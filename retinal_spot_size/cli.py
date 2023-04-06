@@ -12,49 +12,49 @@ from scipy.interpolate import CubicSpline as interp
 app = typer.Typer()
 
 @app.command()
-def rss(config_file : pathlib.Path):
-	if not config_file.exists():
-		print(f"Config file does not exits `{config_file}`")
-		return 1
-
-
-@app.command()
 def rss_figure_8():
+	# Wavelength range discretization
 	N = 100
-	_lambda_lower_bound = Q_(8000, 'nm')
-	_lambda_upper_bound = Q_(10400, 'nm')
-	_lambda_lower_bound = Q_(400, 'nm')
-	_lambda_upper_bound = Q_(1400, 'nm')
-	_lambda_range = np.linspace(_lambda_lower_bound, _lambda_upper_bound, 101)
-	z0 = Q_(0, 'm')
-	beam_waist = Q_(4.24 / 2, 'mm')
+	_lambda_lower_bound = Q_(545, 'nm')
+	_lambda_upper_bound = Q_(645, 'nm')
+	_lambda_range = np.linspace(_lambda_lower_bound, _lambda_upper_bound, N)
 
-	print(eye_equiv_ABCD(Q_(700, 'nm')))
-	radius_list = []
-	roc_list = []
-	z_list = []
-	for _lambda in _lambda_range:
-		_ang_div = ang_div(_lambda, beam_waist)
-		q_0 = q_hat(z0, z_R(_lambda, _ang_div))
-		q_1 = propagate_q_hat(q_0, reduced_eye(_lambda, 6.1 * ureg.mm))
-		#print(f"{_lambda} {q_1}")
-		retinal_roc = current_beam_roc(N_VITREOUS, q_1)
-		retinal_rad = current_beam_rad(_lambda, q_1)
-		retinal_rad.ito("um")
-		radius_list.append(retinal_rad.magnitude)
-		roc_list.append(retinal_roc.magnitude)
-	radius_list = np.array(radius_list)
-	# Code is generating a reflected, shifted version, these numbers
-	# qualitatively fit what is happening, so the question is: What is
-	# causing our function to have this issue?
-	#plt.plot(-0.35 * (_lambda_range.magnitude - 11600), radius_list * 0.1)		
-	plt.plot(_lambda_range.magnitude, 2 * radius_list)		
-	# plt.plot(_lambda_range.magnitude, roc_list)		
-	plt.title("retinal radius as function of wavelength, waist size %f %s" %(beam_waist.magnitude, beam_waist.units))
-	plt.xlabel("wavelength, (%s)" %(_lambda_range.units))
-	plt.ylabel("retinal radius, (%s)" %(retinal_rad.units))
+	# Initialize physical constants using pint
+	z0 = Q_(0, 'm')
+	for M in [m for m in np.linspace(1, 1.5, 3)]:
+			beam_waist = Q_(3.24 / 2 / M, 'mm')
+
+			# Initialize lists for beam radius and radius of curvature
+			radius_list = []
+			roc_list = []
+			for _lambda in _lambda_range:
+				# Physical parameters that depend on lambda
+				_ang_div 		= ang_div(_lambda, beam_waist)
+				rayleigh_range 	= z_R(_lambda, _ang_div)
+				reduced_eye_ABCD = reduced_eye(_lambda, 6.1 * ureg.mm)
+				# Initialize reduced complex beam parameter
+				q_0 = q_hat(z0, rayleigh_range)
+				# Propogate reduced complex beam parameter
+				q_1 = propagate_q_hat(q_0, reduced_eye_ABCD)
+				# Find radius of curvature and radius
+				retinal_roc = current_beam_roc(sellmeier_vitreous(_lambda), q_1)
+				retinal_rad = current_beam_rad(_lambda, q_1)
+				retinal_rad.ito("um")
+				# Plotting goes easier with non-Quantities so units are stripped
+				radius_list.append(M*retinal_rad.magnitude)
+				roc_list.append(retinal_roc.magnitude)
+			radius_list = np.array(radius_list)
+			roc_list = np.array(roc_list)
+			# Code is generating a reflected, shifted version, these numbers
+			# qualitatively fit what is happening, so the question is: What is
+			# causing our function to have this issue?
+			plt.plot(_lambda_range.magnitude, 2 * radius_list, label=f"M$^2$ = {M**2:.3}")		
+			#plt.plot(_lambda_range.magnitude, 2 * roc_list)		
+	plt.title("Retinal Radius Variation with Wavelength")#, waist size %f %s" %(beam_waist.magnitude, beam_waist.units))
+	plt.xlabel(f"wavelength, ({_lambda_range.units})")
+	plt.ylabel(f"retinal radius, ({retinal_rad.units})")
+	plt.legend()
 	plt.show()
-	print(interp(_lambda_range.magnitude, 2 * radius_list)(1300 * ureg.nm))
 
 
 @app.command()
@@ -68,7 +68,7 @@ def rf8():
 def spot_size_z_range():
 	_lambda = Q_(700, 'nm')
 	beam_waist = Q_(100, 'um')
-	z0_range = np.linspace(-100, 100, 100) * ureg.mm
+	z0_range = np.linspace(-50, 50, 100) * ureg.cm
 	div = ang_div(_lambda, beam_waist)
 	radius_list = np.zeros(len(z0_range))
 	for i, z0 in enumerate(z0_range):
@@ -136,14 +136,12 @@ def display_sizes():
 	q_0 = q_hat(z0, z_R(_lambda, _ang_div))
 	waist = current_beam_rad(_lambda, q_0)
 	waist.ito("um")
-	print(waist.magnitude)
 	radius_list = [waist.magnitude]
 	for interface in optical_system[::-1]:
 		q_1 = propagate_q_hat(q_0, interface)
 		retinal_rad = current_beam_rad(_lambda, q_1)
 		retinal_rad.ito('um')
 		radius_list.append(retinal_rad.magnitude)
-	print(radius_list)
 	
 	radius_list = np.array(radius_list)
 	plt.plot(np.linspace(0, 10, len(radius_list)), radius_list)		
@@ -159,10 +157,10 @@ def ds():
 @app.command()
 def propagation_progress():
 	_lambda = Q_(700, 'nm')
-	beam_waist = Q_(100, 'um')
+	beam_waist = Q_(51, 'um')
 	Delta_z = Q_(1, 'mm')
 	z0 = Q_(0, 'mm')
-	L = Q_(2, 'mm')
+	L = Q_(20, 'mm')
 	s = L / 2
 	f = (pi**2 * beam_waist**4 / 2 / s / _lambda**2) + s / 2
 	f = pi * beam_waist**2 /  _lambda
@@ -177,12 +175,13 @@ def propagation_progress():
 	N = L / Delta_z
 	N.ito("")
 	N = int(N.magnitude)
-	distance = np.linspace(0, L.magnitude, N)
+	print(N)
+	distance = np.linspace(-L.magnitude, L.magnitude, N)
 	div = ang_div(_lambda, beam_waist)
-	q_0 = q_hat(z0, z_R(_lambda, div))
+	q_0 = q_hat(-L / 2, z_R(_lambda, div))
 	n_water = 1.33
-	ABCD_forward 	= free_space(Delta_z, 1)
-	ABCD_forward_water = free_space(Delta_z, n_water)
+	ABCD_forward 		= free_space(Delta_z, 1)
+	ABCD_forward_water 	= free_space(Delta_z, n_water)
 	ABCD_thin_lens 	= thin_lens(f)
 	ABCD_air_water 	= curved_interface(-Q_(6, 'mm'), 1, n_water)
 	radii = []
@@ -193,12 +192,12 @@ def propagation_progress():
 		q_i = propagate_q_hat(q_i, ABCD_forward)
 		beam_radius_i = current_beam_rad(_lambda, q_i)
 		radii.append(beam_radius_i.magnitude)
-	#q_i = propagate_q_hat(q_i, ABCD_thin_lens)
-	q_i = propagate_q_hat(q_i, ABCD_air_water)
+	# q_i = propagate_q_hat(q_i, ABCD_thin_lens)
+	q_i = propagate_q_hat(q_i, ABCD_forward)
 	beam_radius_i = current_beam_rad(_lambda, q_i)
 	radii.append(beam_radius_i.magnitude)
 	for i in range(N // 2):
-		q_i = propagate_q_hat(q_i, ABCD_forward_water)
+		q_i = propagate_q_hat(q_i, ABCD_forward)
 		beam_radius_i = current_beam_rad(_lambda, q_i)
 		radii.append(beam_radius_i.magnitude)
 	
@@ -206,7 +205,7 @@ def propagation_progress():
 	plt.plot(distance, radii)
 	plt.plot(distance, -(radii))
 	plt.title("")
-	plt.xlabel("distacne (%s)" %L.units)
+	plt.xlabel("distane (%s)" %L.units)
 	plt.ylabel("radius (%s)" %beam_radius_i.units)
 	plt.show()
 	print("initial complex beam parameter: %s" %(q_0))
@@ -217,10 +216,74 @@ def pp():
 	propagation_progress()
 
 @app.command()
+def wsq():
+	for M, color in zip([1, 1.2], ['orange', 'blue']):
+		_lambda = Q_(700, 'nm')
+		beam_waist = Q_(53 / M, 'um')
+		Delta_z = Q_(1, 'mm')
+		z0 = Q_(0, 'mm')
+		L = Q_(20, 'mm')
+		s = L / 2
+		f = (pi**2 * beam_waist**4 / 2 / s / _lambda**2) + s / 2
+		f = pi * beam_waist**2 /  _lambda
+		f.ito('mm')
+		L = f * 2 * M**2
+		f.ito('m')
+		N = L / Delta_z
+		N.ito("")
+		N = int(N.magnitude)
+		distance = np.linspace(0, L.magnitude, N)
+		div = ang_div(_lambda, beam_waist)
+		q_0 = q_hat(-L / 2, z_R(_lambda, div))
+		q_0 = q_hat(0 * ureg.mm, z_R(_lambda, div))
+		n_water = 1.33
+		ABCD_forward 		= free_space(Delta_z, 1)
+		ABCD_forward_water 	= free_space(Delta_z, n_water)
+		ABCD_thin_lens 	= thin_lens(f)
+		ABCD_air_water 	= curved_interface(-Q_(6, 'mm'), 1, n_water)
+		radii = []
+		q_i = q_0
+		print("focal length: %s" %(f))
+		print("           s: %s" %(s))
+		for i in range(N // 2):
+			q_i = propagate_q_hat(q_i, ABCD_forward)
+			beam_radius_i = current_beam_rad(_lambda, q_i)
+			radii.append(beam_radius_i.magnitude)
+		# q_i = propagate_q_hat(q_i, ABCD_thin_lens)
+		q_i = propagate_q_hat(q_i, ABCD_forward)
+		beam_radius_i = current_beam_rad(_lambda, q_i)
+		radii.append(beam_radius_i.magnitude)
+		for i in range(N // 2):
+			q_i = propagate_q_hat(q_i, ABCD_forward)
+			beam_radius_i = current_beam_rad(_lambda, q_i)
+			radii.append(beam_radius_i.magnitude)
+		
+		radii = np.array(radii) * 1000
+		plt.plot(distance, radii*M, color, label=f"M={M*1.0:.2}")
+		plt.plot(distance, -(radii*M), color)
+		plt.plot(-1 * distance[::-1], radii[::-1]*M, color)
+		plt.plot(-1 * distance[::-1], -(radii[::-1]*M), color)
+	plt.title("Effect of Beam Quality Factor")
+	plt.legend()
+	L.ito("m")
+	plt.xlabel("distance (%s)" %L.units)
+	plt.ylabel("radius (%s)" %beam_radius_i.units)
+	plt.show()
+	print("initial complex beam parameter: %s" %(q_0))
+	print("  final complex beam parameter: %s" %(q_i))
+
+@app.command()
+def w():
+	wsq()
+
+@app.command()
 def sellmeier_figure_7():
 	lambda_ = np.linspace(400, 1400, 1000) * ureg.nm
 	n	= sellmeier_vitreous(lambda_)
 	plt.plot(lambda_, n)
+	plt.xlabel(f"$\lambda$ (Wavelength), ({lambda_[0].units})")
+	plt.ylabel(f"n (refractive index)")
+	plt.title (f"Refractive Index for Eye")
 	plt.show()
 
 @app.command()

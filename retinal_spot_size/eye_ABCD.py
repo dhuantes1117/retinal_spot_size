@@ -14,11 +14,11 @@ def reduced_eye(_lambda, R):
 	M_lens 		= np.matmul(M_lens_back, np.matmul(M_lens_prop, M_lens_front))
 	M_vitreous 	= free_space(LENS_TO_RETINA_DISTANCE, sellmeier_vitreous(_lambda))
 	M_vitreous 	= free_space(CORNEAL_THICKNESS + CORNEA_TO_LENS_DISTANCE + LENS_THICKNESS + LENS_TO_RETINA_DISTANCE, sellmeier_vitreous(_lambda))
+	#print(f"Eye_Length: {CORNEAL_THICKNESS + CORNEA_TO_LENS_DISTANCE + LENS_THICKNESS + LENS_TO_RETINA_DISTANCE}")
 	M_vitreous 	= free_space(2.44 * ureg.cm, sellmeier_vitreous(_lambda))
 
 	optical_system = [M_front_cornea, M_cornea, M_back_cornea, M_to_lens, M_lens_front, M_lens_prop, M_lens_back, M_vitreous]
 	optical_system = [M_front_cornea, M_vitreous]
-	print(f"Eye_Length: {CORNEAL_THICKNESS + CORNEA_TO_LENS_DISTANCE + LENS_THICKNESS + LENS_TO_RETINA_DISTANCE}")
 
 	ABCD = np.identity(2)
 	for interface in optical_system:
