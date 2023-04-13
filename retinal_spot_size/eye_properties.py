@@ -1,6 +1,6 @@
 from retinal_spot_size import *
 from .utils import *
-# lengths in mm
+# NEED TO SOURCE THESE CONSTANTS. Some from Sliney, some from paper
 N_AIR 	   = 1    
 N_CORNEA   = 1.376
 N_VITREOUS = 1.337

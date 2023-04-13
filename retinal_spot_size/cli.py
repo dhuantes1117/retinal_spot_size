@@ -12,7 +12,25 @@ from scipy.interpolate import CubicSpline as interp
 app = typer.Typer()
 
 @app.command()
+def pds():
+	print(sellmeier_vitreous.__doc__)
+
+@app.command()
 def rss_figure_8():
+	"""
+	[rss_figure_8 description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	# Wavelength range discretization
 	N = 100
 	_lambda_lower_bound = Q_(545, 'nm')
@@ -59,6 +77,20 @@ def rss_figure_8():
 
 @app.command()
 def rf8():
+	"""
+	[rf8 description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	import pudb
 	#pu.db
 	rss_figure_8()	
@@ -66,6 +98,20 @@ def rf8():
 
 @app.command()
 def spot_size_z_range():
+	"""
+	[spot_size_z_range description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	_lambda = Q_(700, 'nm')
 	beam_waist = Q_(100, 'um')
 	z0_range = np.linspace(-50, 50, 100) * ureg.cm
@@ -73,7 +119,7 @@ def spot_size_z_range():
 	radius_list = np.zeros(len(z0_range))
 	for i, z0 in enumerate(z0_range):
 		q_0 = q_hat(z0, z_R(_lambda, div))
-		q_1 = complex_matmul(q_0, eye_equiv_ABCD(_lambda))
+		q_1 = complex_matmul(q_0, reduced_eye(_lambda, 6.1 * ureg.mm))
 		beam_waist = current_beam_rad(_lambda, q_0) 
 		retinal_rad = current_beam_rad(_lambda, q_1)
 		retinal_rad.ito('um')
@@ -85,10 +131,38 @@ def spot_size_z_range():
 
 @app.command()
 def ssz():
+	"""
+	[ssz description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	spot_size_z_range()	
 
 @app.command()
 def spot_size_w_range():
+	"""
+	[spot_size_w_range description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	_lambda = Q_(700, 'nm')
 	z0 = 0 * ureg.mm 
 	w0_range = np.linspace(10, 1000, 100) * ureg.um
@@ -96,7 +170,7 @@ def spot_size_w_range():
 	for i, beam_waist in enumerate(w0_range):
 		div = ang_div(_lambda, beam_waist)
 		q_0 = q_hat(z0, z_R(_lambda, div))
-		q_1 = complex_matmul(q_0, eye_equiv_ABCD(_lambda))
+		q_1 = complex_matmul(q_0, reduced_eye(_lambda, 6.1 * ureg.mm))
 		retinal_rad = current_beam_rad(_lambda, q_1)
 		retinal_rad.ito('um')
 		radius_list[i] = retinal_rad.magnitude
@@ -109,12 +183,40 @@ def spot_size_w_range():
 
 @app.command()
 def ssw():
+	"""
+	[ssw description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	spot_size_w_range()	
 
 @app.command()
 def display_sizes():
+	"""
+	[display_sizes description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	_lambda = 700 * ureg.nm
-	M_lens = eye_lens_ABCD(_lambda)
+	M_lens = reduced_eye(_lambda, 6.1 * ureg.mm)
 	print(M_lens)
 	print("f equiv for lens: %f" %(1 / M_lens[1][0]))
 	M_front_cornea  = curved_interface(-1*CORNEA_RAD_FRONT, N_AIR, N_CORNEA)
@@ -152,10 +254,38 @@ def display_sizes():
 
 @app.command()
 def ds():
+	"""
+	[ds description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	display_sizes()
 
 @app.command()
 def propagation_progress():
+	"""
+	[propagation_progress description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	_lambda = Q_(700, 'nm')
 	beam_waist = Q_(51, 'um')
 	Delta_z = Q_(1, 'mm')
@@ -213,10 +343,38 @@ def propagation_progress():
 
 @app.command()
 def pp():
+	"""
+	[pp description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	propagation_progress()
 
 @app.command()
 def wsq():
+	"""
+	[wsq description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	for M, color in zip([1, 1.2], ['orange', 'blue']):
 		_lambda = Q_(700, 'nm')
 		beam_waist = Q_(53 / M, 'um')
@@ -274,10 +432,38 @@ def wsq():
 
 @app.command()
 def w():
+	"""
+	[w(): description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	wsq()
 
 @app.command()
 def sellmeier_figure_7():
+	"""
+	[sellmeier_figure_7 description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	lambda_ = np.linspace(400, 1400, 1000) * ureg.nm
 	n	= sellmeier_vitreous(lambda_)
 	plt.plot(lambda_, n)
@@ -288,10 +474,38 @@ def sellmeier_figure_7():
 
 @app.command()
 def rf7():
+	"""
+	[rf7 description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	sellmeier_figure_7()
 
 @app.command()
 def reduced_eye_ROC():
+	"""
+	[reduced_eye_ROC description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	R_range = [6.1 * ureg.mm]
 	R_range = np.linspace(6.16 * ureg.mm, 6.20 * ureg.mm, 5)
 	spot_size_roc = []
@@ -305,7 +519,6 @@ def reduced_eye_ROC():
 		z0 = Q_(0, 'm')
 		beam_waist = Q_(4.24, 'mm')
 
-		print(eye_equiv_ABCD(Q_(700, 'nm')))
 		radius_list = []
 		z_list = []
 		for _lambda in _lambda_range:
@@ -332,4 +545,18 @@ def reduced_eye_ROC():
 
 @app.command()
 def rer():
+	"""
+	[rer description]
+	
+	Parameters
+	-----------
+	:	Type
+		Description
+	
+	Returns
+	----------
+	Type
+		Description
+	
+	"""
 	reduced_eye_ROC()
