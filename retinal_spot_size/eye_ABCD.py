@@ -3,7 +3,7 @@ from .utils import *
 from .eye_properties import *
 from .ABCD import *
 
-def reduced_eye(_lambda, R, eye_length=Q_(2.44, 'cm')):
+def reduced_eye(_lambda, R, eye_length=Q_(2.44, 'cm'), perc_adj=0):
 	"""
 	should return an ABCD matrix representing the reduced eye model with
 	chromatic aberration, and corneal radius of curvature of R
@@ -24,10 +24,10 @@ def reduced_eye(_lambda, R, eye_length=Q_(2.44, 'cm')):
 		retina
 	
 	"""
-	M_front_cornea  = curved_interface(-1*R, N_AIR, sellmeier_vitreous(_lambda))
-	M_cornea 	= free_space(CORNEAL_THICKNESS, sellmeier_vitreous(_lambda))
+	M_front_cornea  = curved_interface(-1*R, N_AIR, (1 + perc_adj) * sellmeier_vitreous(_lambda))
+	M_cornea 		= free_space(CORNEAL_THICKNESS, sellmeier_vitreous(_lambda))
 	M_back_cornea 	= curved_interface(-1*CORNEA_RAD_BACK, sellmeier_vitreous(_lambda), sellmeier_vitreous(_lambda))
-	M_to_lens 	= free_space(CORNEA_TO_LENS_DISTANCE, sellmeier_vitreous(_lambda)) # AQEUOUS
+	M_to_lens 		= free_space(CORNEA_TO_LENS_DISTANCE, sellmeier_vitreous(_lambda)) # AQEUOUS
 	M_lens_front	= curved_interface(-1*LENS_RAD_FRONT, sellmeier_vitreous(_lambda), sellmeier_vitreous(_lambda))
 	M_lens_prop	= free_space(LENS_THICKNESS, sellmeier_vitreous(_lambda))
 	M_lens_back	= curved_interface(LENS_RAD_BACK, sellmeier_vitreous(_lambda), sellmeier_vitreous(_lambda))
@@ -35,7 +35,7 @@ def reduced_eye(_lambda, R, eye_length=Q_(2.44, 'cm')):
 	M_vitreous 	= free_space(LENS_TO_RETINA_DISTANCE, sellmeier_vitreous(_lambda))
 	M_vitreous 	= free_space(CORNEAL_THICKNESS + CORNEA_TO_LENS_DISTANCE + LENS_THICKNESS + LENS_TO_RETINA_DISTANCE, sellmeier_vitreous(_lambda))
 	#print(f"Eye_Length: {CORNEAL_THICKNESS + CORNEA_TO_LENS_DISTANCE + LENS_THICKNESS + LENS_TO_RETINA_DISTANCE}")
-	M_vitreous 	= free_space(eye_length, sellmeier_vitreous(_lambda))
+	M_vitreous 	= free_space(eye_length, (1 + perc_adj) * sellmeier_vitreous(_lambda))
 
 	optical_system = [M_front_cornea, M_vitreous]
 

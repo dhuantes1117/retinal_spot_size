@@ -1,0 +1,1278 @@
+
+
+*******************************************************************************
+Tue Apr 25 19:31:56 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (l**2 - Ca)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Apr 25 19:34:10 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (l**2 - Ca)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Apr 25 19:34:15 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (l**2 - Ca)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Apr 25 19:35:32 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (l**2 - Ca)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Apr 25 19:36:56 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (l**2 - Ca)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Apr 25 19:37:04 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (l**2 - Ca)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Apr 25 19:41:05 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (l**2 - Ca)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Apr 25 19:42:03 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.2830003690e+02   0.00e+00  7.07e-01    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   3 1.0687971622e+01  -3.28e-03  7.07e-04   -9.952334e-02  -9.952331e-02  -9.952332e-02   1.034457e+00   1.034457e+00   1.034457e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 10.688
+rel. change during last iteration : -3.28075e-08
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.873743
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.763427
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -0.0995233       +/- 4.668e+11    (4.69e+14%)
+B2_             = -0.0995233       +/- 4.933e+11    (4.957e+14%)
+B3_             = -0.0995233       +/- 5.904e+11    (5.933e+14%)
+C1_             = 1.03446          +/- 3.964e+12    (3.832e+14%)
+C2_             = 1.03446          +/- 4.576e+12    (4.423e+14%)
+C3_             = 1.03446          +/- 5.13e+12     (4.959e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.245  1.000 
+B3_            -0.586 -0.642  1.000 
+C1_             0.738 -0.238 -0.385  1.000 
+C2_            -0.014  0.600 -0.490 -0.285  1.000 
+C3_            -0.558 -0.351  0.735 -0.519 -0.672  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:42:52 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.0694190482e+01   0.00e+00  4.07e-01   -9.952334e-02  -9.952331e-02  -9.952332e-02   1.034457e+00   1.034457e+00   1.034457e+00
+ 557 3.6090360251e-01  -5.14e-01  4.07e-06    9.875403e+02   1.009810e+01  -9.799269e+00  -1.119936e+02   2.431254e+01   5.904439e+00
+
+After 557 iterations the fit converged.
+final sum of squares of residuals : 0.360904
+rel. change during last iteration : -5.14122e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.160558
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0257788
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = 987.54           +/- 7.43e+08     (7.524e+07%)
+B2_             = 10.0981          +/- 7.405e+10    (7.333e+11%)
+B3_             = -9.79927         +/- 2.311e+05    (2.358e+06%)
+C1_             = -111.994         +/- 3.976e+10    (3.551e+10%)
+C2_             = 24.3125          +/- 1.643e+11    (6.758e+11%)
+C3_             = 5.90444          +/- 4.713e+04    (7.983e+05%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -1.000  1.000 
+B3_            -0.124  0.094  1.000 
+C1_            -0.374  0.403 -0.872  1.000 
+C2_             0.608 -0.583 -0.861  0.509  1.000 
+C3_            -0.143  0.112  0.999 -0.860 -0.868  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:44:30 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 3.9072190851e+03   0.00e+00  6.13e+00    7.510000e+00  -4.480000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+ 898 3.4399685751e-01  -1.21e-01  6.13e-05    3.199973e+03   8.040238e+00  -3.192209e+01  -7.522839e-02   1.025463e+01   1.862504e+00
+
+After 898 iterations the fit converged.
+final sum of squares of residuals : 0.343997
+rel. change during last iteration : -1.20626e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.156752
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0245712
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = 3199.97          +/- 2.733e+08    (8.541e+06%)
+B2_             = 8.04024          +/- 2.51e+10     (3.121e+11%)
+B3_             = -31.9221         +/- 3.076e+05    (9.637e+05%)
+C1_             = -0.0752284       +/- 1.075e+08    (1.429e+11%)
+C2_             = 10.2546          +/- 2.255e+10    (2.199e+11%)
+C3_             = 1.8625           +/- 9235         (4.958e+05%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.997  1.000 
+B3_            -0.753  0.698  1.000 
+C1_             0.129 -0.120 -0.165  1.000 
+C2_             0.815 -0.859 -0.237  0.129  1.000 
+C3_            -0.711  0.653  0.998 -0.153 -0.177  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:45:04 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv"
+        format = z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 3.4399685751e-01   0.00e+00  1.85e+02    3.199973e+03   8.040238e+00  -3.192209e+01  -7.522839e-02   1.025463e+01   1.862504e+00
+ 212 3.3902015145e-01  -9.98e-01  1.85e-02    1.003846e+04   8.041117e+00  -1.003065e+02  -7.522959e-02   1.025527e+01   5.989303e-01
+
+After 212 iterations the fit converged.
+final sum of squares of residuals : 0.33902
+rel. change during last iteration : -9.98121e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.155614
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0242157
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = 10038.5          +/- 1.161e+08    (1.156e+06%)
+B2_             = 8.04112          +/- 7.882e+09    (9.802e+10%)
+B3_             = -100.307         +/- 7.227e+05    (7.205e+05%)
+C1_             = -0.0752296       +/- 6.377e+07    (8.477e+10%)
+C2_             = 10.2553          +/- 1.045e+10    (1.019e+11%)
+C3_             = 0.59893          +/- 2563         (4.279e+05%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.790  1.000 
+B3_            -0.744  0.179  1.000 
+C1_             0.331  0.121 -0.664  1.000 
+C2_             0.038 -0.629  0.625 -0.455  1.000 
+C3_            -0.698  0.114  0.997 -0.648  0.681  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:47:07 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10e-6):2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.2237043839e+05   0.00e+00  5.69e+01    1.003846e+04   8.041117e+00  -1.003065e+02  -7.522959e-02   1.025527e+01   5.989303e-01
+  12 1.2383891815e+01  -1.09e-01  5.69e-10    3.385017e+06   5.890190e+02  -5.580728e+05  -4.596815e+04  -2.863431e+03   1.147588e+04
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 12.3839
+rel. change during last iteration : -1.09079e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.940512
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.884564
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = 3.38502e+06      +/- 2.533e+16    (7.482e+11%)
+B2_             = 589.019          +/- 2.238e+15    (3.8e+14%)
+B3_             = -558073          +/- 1.742e+18    (3.122e+14%)
+C1_             = -45968.2         +/- 1.724e+14    (3.75e+11%)
+C2_             = -2863.43         +/- 1.253e+16    (4.375e+14%)
+C3_             = 11475.9          +/- 3.853e+16    (3.357e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.094  1.000 
+B3_             0.864 -0.037  1.000 
+C1_            -1.000  0.096 -0.864  1.000 
+C2_             0.284  0.706  0.272 -0.282  1.000 
+C3_             0.883 -0.122  0.526 -0.882  0.229  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:47:45 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10e-6):2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.2482590717e+01   0.00e+00  2.45e-03    7.510000e+00  -4.480000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+  14 1.2383632258e+01  -4.45e-02  2.45e-05   -1.838581e+03  -4.469655e+00   6.379682e-01   2.553120e+01   8.615970e+00  -2.603679e+00
+
+After 14 iterations the fit converged.
+final sum of squares of residuals : 12.3836
+rel. change during last iteration : -4.44761e-07
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.940503
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.884545
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -1838.58         +/- 1.035e+11    (5.627e+09%)
+B2_             = -4.46965         +/- 1.932e+13    (4.322e+14%)
+B3_             = 0.637968         +/- 2.662e+12    (4.173e+14%)
+C1_             = 25.5312          +/- 7.19e+08     (2.816e+09%)
+C2_             = 8.61597          +/- 3.226e+13    (3.744e+14%)
+C3_             = -2.60368         +/- 1.203e+13    (4.622e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_             0.384  1.000 
+B3_             0.929  0.345  1.000 
+C1_            -1.000 -0.384 -0.929  1.000 
+C2_             0.422  0.714  0.276 -0.421  1.000 
+C3_             0.944  0.360  0.755 -0.944  0.490  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:48:18 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):($2 * 1)
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.2469124247e+01   0.00e+00  3.81e-04   -1.838581e+03  -4.469655e+00   6.379682e-01   2.553120e+01   8.615970e+00  -2.603679e+00
+  34 1.2383710575e+01  -5.80e-01  3.81e-03   -2.975218e+03  -4.469654e+00   6.379695e-01   4.132873e-01   8.615971e+00  -2.603674e+00
+
+After 34 iterations the fit converged.
+final sum of squares of residuals : 12.3837
+rel. change during last iteration : -5.80391e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.940506
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.884551
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -2975.22         +/- 1.087e+09    (3.653e+07%)
+B2_             = -4.46965         +/- 1.449e+13    (3.242e+14%)
+B3_             = 0.637969         +/- 1.616e+12    (2.532e+14%)
+C1_             = 0.413287         +/- 7.857e+04    (1.901e+07%)
+C2_             = 8.61597          +/- 2.596e+13    (3.014e+14%)
+C3_             = -2.60367         +/- 9.484e+12    (3.643e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_             0.080  1.000 
+B3_             0.755  0.019  1.000 
+C1_            -0.996 -0.068 -0.736  1.000 
+C2_            -0.275  0.650 -0.213  0.288  1.000 
+C3_             0.898  0.104  0.403 -0.893 -0.237  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:48:28 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):($2 * 10**-6)
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.2394946384e+01   0.00e+00  3.81e-02   -2.975218e+03  -4.469654e+00   6.379695e-01   4.132873e-01   8.615971e+00  -2.603674e+00
+  28 4.7537998137e+00  -5.57e-01  3.81e-09    3.464140e+08  -1.268706e+02  -2.920482e+02   3.639815e+03   8.257297e+02   5.100969e+02
+
+After 28 iterations the fit converged.
+final sum of squares of residuals : 4.7538
+rel. change during last iteration : -5.5702e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.582715
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.339557
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = 3.46414e+08      +/- 5.532e+15    (1.597e+09%)
+B2_             = -126.871         +/- 5.54e+14     (4.367e+14%)
+B3_             = -292.048         +/- 2.129e+15    (7.291e+14%)
+C1_             = 3639.82          +/- 5.821e+10    (1.599e+09%)
+C2_             = 825.73           +/- 5.657e+15    (6.851e+14%)
+C3_             = 510.097          +/- 3.439e+15    (6.741e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.239  1.000 
+B3_            -0.054  0.191  1.000 
+C1_             1.000 -0.238 -0.049  1.000 
+C2_            -0.257  0.582  0.455 -0.255  1.000 
+C3_             0.248 -0.004  0.670  0.252  0.296  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:50:29 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):($2 * 10**-6)
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sqrt(sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3))
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = sqrt(1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3))
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.0911354314e+01   0.00e+00  4.48e-01    3.464140e+08  -1.268706e+02  -2.920482e+02   3.639815e+03   8.257297e+02   5.100969e+02
+  19 1.0022125229e+01  -4.64e-01  4.48e-18    2.495320e+24   3.390141e+13  -2.114745e+14   1.883331e+19  -1.236374e+13   1.382544e+15
+
+After 19 iterations the fit converged.
+final sum of squares of residuals : 10.0221
+rel. change during last iteration : -4.64133e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.846089
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.715866
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = 2.49532e+24      +/- 7.572e+27    (3.034e+05%)
+B2_             = 3.39014e+13      +/- 1.499e+26    (4.422e+14%)
+B3_             = -2.11475e+14     +/- 7.887e+26    (3.729e+14%)
+C1_             = 1.88333e+19      +/- 5.816e+22    (3.088e+05%)
+C2_             = -1.23637e+13     +/- 4.814e+25    (3.894e+14%)
+C3_             = 1.38254e+15      +/- 4.341e+27    (3.14e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.055  1.000 
+B3_            -0.816  0.207  1.000 
+C1_            -1.000  0.057  0.817  1.000 
+C2_            -0.033  0.312 -0.194  0.033  1.000 
+C3_            -0.709 -0.313  0.186  0.707  0.136  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:50:46 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):($2 * 10**-6)
+        format = x:z
+        x range restricted to [-328.760 : 1624.36]
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sqrt(sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3))
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = sqrt(1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3))
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.0022125229e+01   0.00e+00  4.47e-01    2.495320e+24   3.390141e+13  -2.114745e+14   1.883331e+19  -1.236374e+13   1.382544e+15
+   5 9.8235684807e+00   0.00e+00  4.47e+07    3.093576e+24   3.390141e+13  -2.114745e+14   2.237992e+19  -1.236374e+13   1.382544e+15
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 9.82357
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.837665
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.701683
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = 3.09358e+24      +/- 4.365e+26    (1.411e+04%)
+B2_             = 3.39014e+13      +/- 1.337e+26    (3.943e+14%)
+B3_             = -2.11475e+14     +/- 6.084e+26    (2.877e+14%)
+C1_             = 2.23799e+19      +/- 8.774e+20    (3920%)
+C2_             = -1.23637e+13     +/- 6.153e+25    (4.976e+14%)
+C3_             = 1.38254e+15      +/- 3.605e+27    (2.607e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.235  1.000 
+B3_            -0.113 -0.040  1.000 
+C1_             1.000 -0.236 -0.114  1.000 
+C2_             0.262  0.118 -0.673  0.264  1.000 
+C3_             0.077 -0.104 -0.980  0.077  0.547  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:53:26 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sqrt(sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3))
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = sqrt(1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3))
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.2470865175e+01   0.00e+00  1.32e-06    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   1 1.2470853266e+01  -9.55e-02  1.32e-07   -1.401625e+04   9.845985e-01  -1.250398e+01   1.452316e+04   9.734694e-01   1.441456e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 12.4709
+rel. change during last iteration : -9.54906e-07
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.943809
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.890775
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -14016.2         +/- 2.671e+16    (1.905e+14%)
+B2_             = 0.984599         +/- 3.181e+12    (3.231e+14%)
+B3_             = -12.504          +/- 3.038e+13    (2.43e+14%)
+C1_             = 14523.2          +/- 2.771e+16    (1.908e+14%)
+C2_             = 0.973469         +/- 2.949e+12    (3.029e+14%)
+C3_             = 14.4146          +/- 3.712e+13    (2.575e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_             0.357  1.000 
+B3_            -0.077  0.139  1.000 
+C1_            -1.000 -0.357  0.076  1.000 
+C2_             0.127 -0.029  0.278 -0.127  1.000 
+C3_             0.264 -0.350  0.099 -0.265  0.101  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:53:55 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sqrt(sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3))
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = sqrt(1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3))
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.2470853266e+01   0.00e+00  1.28e-06   -1.401625e+04   9.845985e-01  -1.250398e+01   1.452316e+04   9.734694e-01   1.441456e+01
+   1 1.2470853054e+01  -1.71e-03  1.28e-03   -1.426704e+04   9.845986e-01  -1.250418e+01   1.426355e+04   9.734693e-01   1.441433e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 12.4709
+rel. change during last iteration : -1.70587e-08
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.943809
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.890775
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -14267           +/- 2.644e+16    (1.853e+14%)
+B2_             = 0.984599         +/- 3.495e+12    (3.55e+14%)
+B3_             = -12.5042         +/- 4.27e+13     (3.415e+14%)
+C1_             = 14263.6          +/- 2.645e+16    (1.854e+14%)
+C2_             = 0.973469         +/- 3.479e+12    (3.573e+14%)
+C3_             = 14.4143          +/- 4.506e+13    (3.126e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_             0.188  1.000 
+B3_            -0.328  0.216  1.000 
+C1_            -1.000 -0.188  0.327  1.000 
+C2_             0.339 -0.257 -0.074 -0.339  1.000 
+C3_             0.081 -0.292 -0.125 -0.082 -0.358  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:54:44 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):($2**2)
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.6328307157e+01   0.00e+00  5.30e-06   -1.426704e+04   9.845986e-01  -1.250418e+01   1.426355e+04   9.734693e-01   1.441433e+01
+   1 1.6328298140e+01  -5.52e-02  5.30e-03   -1.466590e+04   9.845988e-01  -1.250448e+01   1.386519e+04   9.734691e-01   1.441398e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 16.3283
+rel. change during last iteration : -5.5228e-07
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.07996
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.16631
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -14665.9         +/- 3.278e+16    (2.235e+14%)
+B2_             = 0.984599         +/- 4.246e+12    (4.313e+14%)
+B3_             = -12.5045         +/- 6.181e+13    (4.943e+14%)
+C1_             = 13865.2          +/- 3.103e+16    (2.238e+14%)
+C2_             = 0.973469         +/- 5.086e+12    (5.225e+14%)
+C3_             = 14.414           +/- 4.546e+13    (3.154e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.246  1.000 
+B3_             0.391 -0.108  1.000 
+C1_            -1.000  0.246 -0.392  1.000 
+C2_             0.488 -0.763  0.403 -0.489  1.000 
+C3_            -0.518  0.138  0.006  0.516 -0.286  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:56:14 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):($2**2)
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.6329182766e+01   0.00e+00  2.43e-05    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+   2 1.6327715279e+01  -2.07e-01  2.43e-06   -3.873173e+04  -2.913053e+00   1.136220e+02   8.097619e+03   1.157029e+01   1.507186e+01
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 16.3277
+rel. change during last iteration : -2.06658e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.07994
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.16627
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -38731.7         +/- 4.201e+16    (1.085e+14%)
+B2_             = -2.91305         +/- 1.229e+13    (4.22e+14%)
+B3_             = 113.622          +/- 3.015e+14    (2.654e+14%)
+C1_             = 8097.62          +/- 8.79e+15     (1.085e+14%)
+C2_             = 11.5703          +/- 3.749e+13    (3.24e+14%)
+C3_             = 15.0719          +/- 5.439e+13    (3.609e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_             0.238  1.000 
+B3_             0.079  0.312  1.000 
+C1_            -1.000 -0.240 -0.085  1.000 
+C2_             0.201  0.516  0.082 -0.201  1.000 
+C3_             0.110 -0.242 -0.498 -0.103 -0.072  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:56:41 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):($2**2)
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.6329182766e+01   0.00e+00  2.43e-05    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+   2 1.6327715279e+01  -2.07e-01  2.43e-06   -3.873173e+04  -2.913053e+00   1.136220e+02   8.097619e+03   1.157029e+01   1.507186e+01
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 16.3277
+rel. change during last iteration : -2.06658e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.07994
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.16627
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -38731.7         +/- 4.201e+16    (1.085e+14%)
+B2_             = -2.91305         +/- 1.229e+13    (4.22e+14%)
+B3_             = 113.622          +/- 3.015e+14    (2.654e+14%)
+C1_             = 8097.62          +/- 8.79e+15     (1.085e+14%)
+C2_             = 11.5703          +/- 3.749e+13    (3.24e+14%)
+C3_             = 15.0719          +/- 5.439e+13    (3.609e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_             0.238  1.000 
+B3_             0.079  0.312  1.000 
+C1_            -1.000 -0.240 -0.085  1.000 
+C2_             0.201  0.516  0.082 -0.201  1.000 
+C3_             0.110 -0.242 -0.498 -0.103 -0.072  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:57:11 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 10**-6):($2**2)
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 1.6329182766e+01   0.00e+00  2.43e-05    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+   2 1.6327715279e+01  -2.07e-01  2.43e-06   -3.873173e+04  -2.913053e+00   1.136220e+02   8.097619e+03   1.157029e+01   1.507186e+01
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 16.3277
+rel. change during last iteration : -2.06658e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.07994
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.16627
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -38731.7         +/- 4.201e+16    (1.085e+14%)
+B2_             = -2.91305         +/- 1.229e+13    (4.22e+14%)
+B3_             = 113.622          +/- 3.015e+14    (2.654e+14%)
+C1_             = 8097.62          +/- 8.79e+15     (1.085e+14%)
+C2_             = 11.5703          +/- 3.749e+13    (3.24e+14%)
+C3_             = 15.0719          +/- 5.439e+13    (3.609e+14%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_             0.238  1.000 
+B3_             0.079  0.312  1.000 
+C1_            -1.000 -0.240 -0.085  1.000 
+C2_             0.201  0.516  0.082 -0.201  1.000 
+C3_             0.110 -0.242 -0.498 -0.103 -0.072  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:57:38 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u 1:($2**2)
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 4.0958911337e+03   0.00e+00  6.13e+00    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+  37 1.6317579500e+01  -9.68e-01  6.13e-02    3.457283e+00  -4.494413e+00  -3.148095e-02   1.640983e+00   8.588261e+00  -3.969376e-01
+
+After 37 iterations the fit converged.
+final sum of squares of residuals : 16.3176
+rel. change during last iteration : -9.68439e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.0796
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.16554
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = 3.45728          +/- 4.705e+10    (1.361e+12%)
+B2_             = -4.49441         +/- 8.927e+12    (1.986e+14%)
+B3_             = -0.031481        +/- 7.414e+08    (2.355e+12%)
+C1_             = 1.64098          +/- 3.736e+12    (2.276e+14%)
+C2_             = 8.58826          +/- 1.53e+13     (1.781e+14%)
+C3_             = -0.396938        +/- 2.845e+09    (7.168e+11%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.558  1.000 
+B3_             0.037 -0.850  1.000 
+C1_            -0.126  0.482 -0.501  1.000 
+C2_            -0.788 -0.071  0.585 -0.218  1.000 
+C3_            -0.379  0.979 -0.939  0.499 -0.270  1.000 
+
+
+*******************************************************************************
+Tue Apr 25 19:57:41 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u 1:($2**2)
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**-1, b2*10**-3, b3*10, c1*10**-2, c2*10*-2, c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 4.0958911337e+03   0.00e+00  6.13e+00    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+  37 1.6317579500e+01  -9.68e-01  6.13e-02    3.457283e+00  -4.494413e+00  -3.148095e-02   1.640983e+00   8.588261e+00  -3.969376e-01
+
+After 37 iterations the fit converged.
+final sum of squares of residuals : 16.3176
+rel. change during last iteration : -9.68439e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.0796
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.16554
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = 3.45728          +/- 4.705e+10    (1.361e+12%)
+B2_             = -4.49441         +/- 8.927e+12    (1.986e+14%)
+B3_             = -0.031481        +/- 7.414e+08    (2.355e+12%)
+C1_             = 1.64098          +/- 3.736e+12    (2.276e+14%)
+C2_             = 8.58826          +/- 1.53e+13     (1.781e+14%)
+C3_             = -0.396938        +/- 2.845e+09    (7.168e+11%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.558  1.000 
+B3_             0.037 -0.850  1.000 
+C1_            -0.126  0.482 -0.501  1.000 
+C2_            -0.788 -0.071  0.585 -0.218  1.000 
+C3_            -0.379  0.979 -0.939  0.499 -0.270  1.000 
+
+
+*******************************************************************************
+Thu Apr 27 01:23:10 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u 1:($2**2)
+        format = x:z
+        x range restricted to [0.400000 : 1.40000]
+BREAK: No data to fit
+
+*******************************************************************************
+Thu Apr 27 01:23:40 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 0.001):($2**2)
+        format = x:z
+        x range restricted to [0.400000 : 1.40000]
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**(-1), b2*10**(-3), b3*10, c1*10**(-2), c2*10**(-2), c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.7542437291e+01   0.00e+00  3.17e-01    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+ 150 8.4145374028e-01  -7.72e-01  3.17e-02   -5.973381e+01  -1.970493e-01   6.439467e+01  -6.748558e+01   4.163817e+01  -1.700790e-01
+
+After 150 iterations the fit converged.
+final sum of squares of residuals : 0.841454
+rel. change during last iteration : -7.72097e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.245161
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0601038
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -59.7338         +/- 214.2        (358.6%)
+B2_             = -0.197049        +/- 25.43        (1.29e+04%)
+B3_             = 64.3947          +/- 7901         (1.227e+04%)
+C1_             = -67.4856         +/- 178.8        (264.9%)
+C2_             = 41.6382          +/- 0.3118       (0.7489%)
+C3_             = -0.170079        +/- 21.42        (1.259e+04%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.542  1.000 
+B3_             0.986 -0.491  1.000 
+C1_             0.996 -0.554  0.970  1.000 
+C2_            -0.541  1.000 -0.490 -0.554  1.000 
+C3_            -0.987  0.492 -1.000 -0.970  0.491  1.000 
+
+
+*******************************************************************************
+Thu Apr 27 01:24:24 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 0.001):($2**2)
+        format = x:z
+        x range restricted to [0.400000 : 1.40000]
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**(-1), b2*10**(-3), b3*10, c1*10**(-2), c2*10**(-2), c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.7542437291e+01   0.00e+00  3.17e-01    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+ 150 8.4145374028e-01  -7.72e-01  3.17e-02   -5.973381e+01  -1.970493e-01   6.439467e+01  -6.748558e+01   4.163817e+01  -1.700790e-01
+
+After 150 iterations the fit converged.
+final sum of squares of residuals : 0.841454
+rel. change during last iteration : -7.72097e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.245161
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0601038
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -59.7338         +/- 214.2        (358.6%)
+B2_             = -0.197049        +/- 25.43        (1.29e+04%)
+B3_             = 64.3947          +/- 7901         (1.227e+04%)
+C1_             = -67.4856         +/- 178.8        (264.9%)
+C2_             = 41.6382          +/- 0.3118       (0.7489%)
+C3_             = -0.170079        +/- 21.42        (1.259e+04%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.542  1.000 
+B3_             0.986 -0.491  1.000 
+C1_             0.996 -0.554  0.970  1.000 
+C2_            -0.541  1.000 -0.490 -0.554  1.000 
+C3_            -0.987  0.492 -1.000 -0.970  0.491  1.000 
+
+
+*******************************************************************************
+Thu Apr 27 01:25:30 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 0.001):($2**2)
+        format = x:z
+        x range restricted to [0.400000 : 1.40000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**(-1), b2*10**(-3), b3*10, c1*10**(-2), c2*10**(-2), c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.2188506719e+01   0.00e+00  3.14e-01    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+ 189 2.7529723741e-03  -7.64e-01  3.14e-04   -5.329812e+01  -4.456654e+02   3.898306e+01  -8.958364e+01   1.478063e+01  -1.080549e-01
+
+After 189 iterations the fit converged.
+final sum of squares of residuals : 0.00275297
+rel. change during last iteration : -7.6357e-06
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0158199
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00025027
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -53.2981         +/- 202.9        (380.7%)
+B2_             = -445.665         +/- 1170         (262.5%)
+B3_             = 38.9831          +/- 1502         (3853%)
+C1_             = -89.5836         +/- 353.8        (394.9%)
+C2_             = 14.7806          +/- 21.24        (143.7%)
+C3_             = -0.108055        +/- 4.409        (4080%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_             0.949  1.000 
+B3_             0.996  0.921  1.000 
+C1_             0.996  0.975  0.983  1.000 
+C2_             0.924  0.997  0.892  0.955  1.000 
+C3_            -0.996 -0.922 -1.000 -0.984 -0.893  1.000 
+
+
+*******************************************************************************
+Thu Apr 27 01:28:36 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 0.001):($2**2)
+        format = x:z
+        x range restricted to [0.400000 : 1.40000]
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**(-1), b2*10**(-3), b3*10, c1*10**(-2), c2*10**(-2), c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.7542437291e+01   0.00e+00  3.17e-01    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+ 150 8.4145374028e-01  -7.72e-01  3.17e-02   -5.973381e+01  -1.970493e-01   6.439467e+01  -6.748558e+01   4.163817e+01  -1.700790e-01
+
+After 150 iterations the fit converged.
+final sum of squares of residuals : 0.841454
+rel. change during last iteration : -7.72097e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.245161
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0601038
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -59.7338         +/- 214.2        (358.6%)
+B2_             = -0.197049        +/- 25.43        (1.29e+04%)
+B3_             = 64.3947          +/- 7901         (1.227e+04%)
+C1_             = -67.4856         +/- 178.8        (264.9%)
+C2_             = 41.6382          +/- 0.3118       (0.7489%)
+C3_             = -0.170079        +/- 21.42        (1.259e+04%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.542  1.000 
+B3_             0.986 -0.491  1.000 
+C1_             0.996 -0.554  0.970  1.000 
+C2_            -0.541  1.000 -0.490 -0.554  1.000 
+C3_            -0.987  0.492 -1.000 -0.970  0.491  1.000 
+
+
+*******************************************************************************
+Thu Apr 27 01:29:06 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 0.001):($2**2)
+        format = x:z
+        x range restricted to [0.400000 : 1.40000]
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**(-1), b2*10**(-3), b3*10, c1*10**(-2), c2*10**(-2), c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.7542437291e+01   0.00e+00  3.17e-01    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+ 150 8.4145374028e-01  -7.72e-01  3.17e-02   -5.973381e+01  -1.970493e-01   6.439467e+01  -6.748558e+01   4.163817e+01  -1.700790e-01
+
+After 150 iterations the fit converged.
+final sum of squares of residuals : 0.841454
+rel. change during last iteration : -7.72097e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.245161
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0601038
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -59.7338         +/- 214.2        (358.6%)
+B2_             = -0.197049        +/- 25.43        (1.29e+04%)
+B3_             = 64.3947          +/- 7901         (1.227e+04%)
+C1_             = -67.4856         +/- 178.8        (264.9%)
+C2_             = 41.6382          +/- 0.3118       (0.7489%)
+C3_             = -0.170079        +/- 21.42        (1.259e+04%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.542  1.000 
+B3_             0.986 -0.491  1.000 
+C1_             0.996 -0.554  0.970  1.000 
+C2_            -0.541  1.000 -0.490 -0.554  1.000 
+C3_            -0.987  0.492 -1.000 -0.970  0.491  1.000 
+
+
+*******************************************************************************
+Thu Apr 27 01:29:26 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 0.001):($2**2)
+        format = x:z
+        x range restricted to [0.400000 : 1.40000]
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**(-1), b2*10**(-3), b3*10, c1*10**(-2), c2*10**(-2), c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.7542437291e+01   0.00e+00  3.17e-01    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+ 150 8.4145374028e-01  -7.72e-01  3.17e-02   -5.973381e+01  -1.970493e-01   6.439467e+01  -6.748558e+01   4.163817e+01  -1.700790e-01
+
+After 150 iterations the fit converged.
+final sum of squares of residuals : 0.841454
+rel. change during last iteration : -7.72097e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.245161
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0601038
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -59.7338         +/- 214.2        (358.6%)
+B2_             = -0.197049        +/- 25.43        (1.29e+04%)
+B3_             = 64.3947          +/- 7901         (1.227e+04%)
+C1_             = -67.4856         +/- 178.8        (264.9%)
+C2_             = 41.6382          +/- 0.3118       (0.7489%)
+C3_             = -0.170079        +/- 21.42        (1.259e+04%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.542  1.000 
+B3_             0.986 -0.491  1.000 
+C1_             0.996 -0.554  0.970  1.000 
+C2_            -0.541  1.000 -0.490 -0.554  1.000 
+C3_            -0.987  0.492 -1.000 -0.970  0.491  1.000 
+
+
+*******************************************************************************
+Thu Apr 27 01:31:21 2023
+
+
+FIT:    data read from "Vincelette-RefractiveError.csv" u ($1 * 0.001):($2**2)
+        format = x:z
+        x range restricted to [0.400000 : 1.40000]
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: mag_adj_sellmeier(x, B1_, B2_, B3_, C1_, C2_, C3_)
+	mag_adj_sellmeier(l_, b1, b2, b3, c1, c2, c3) = sellmeier(l_, b1*10**(-1), b2*10**(-3), b3*10, c1*10**(-2), c2*10**(-2), c3*10**3)
+	sellmeier(l, B1, B2, B3, C1, C2, C3) = 1 + sterm(l, B1, C1) + sterm(l, B2, C2) + sterm(l, B3, C3)
+	sterm(la, Ba, Ca) = la**2 * Ba / (la**2 - Ca)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   B1_           B2_           B3_           C1_           C2_           C3_          
+   0 2.7542437291e+01   0.00e+00  3.17e-01    7.516000e+00  -4.484000e+00  -1.503000e+00   1.641000e+00   8.596000e+00  -1.028000e+00
+ 150 8.4145374028e-01  -7.72e-01  3.17e-02   -5.973381e+01  -1.970493e-01   6.439467e+01  -6.748558e+01   4.163817e+01  -1.700790e-01
+
+After 150 iterations the fit converged.
+final sum of squares of residuals : 0.841454
+rel. change during last iteration : -7.72097e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.245161
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0601038
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+B1_             = -59.7338         +/- 214.2        (358.6%)
+B2_             = -0.197049        +/- 25.43        (1.29e+04%)
+B3_             = 64.3947          +/- 7901         (1.227e+04%)
+C1_             = -67.4856         +/- 178.8        (264.9%)
+C2_             = 41.6382          +/- 0.3118       (0.7489%)
+C3_             = -0.170079        +/- 21.42        (1.259e+04%)
+
+correlation matrix of the fit parameters:
+                B1_    B2_    B3_    C1_    C2_    C3_    
+B1_             1.000 
+B2_            -0.542  1.000 
+B3_             0.986 -0.491  1.000 
+C1_             0.996 -0.554  0.970  1.000 
+C2_            -0.541  1.000 -0.490 -0.554  1.000 
+C3_            -0.987  0.492 -1.000 -0.970  0.491  1.000 

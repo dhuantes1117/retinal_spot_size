@@ -33,14 +33,14 @@ def rss_figure_8():
 	
 	"""
 	# Wavelength range discretization
-	N = 100
+	N = 200
 	_lambda_lower_bound = Q_(400, 'nm')
 	_lambda_upper_bound = Q_(1400, 'nm')
 	_lambda_range = np.linspace(_lambda_lower_bound, _lambda_upper_bound, N)
 
 	# Initialize physical constants using pint
 	z0 = Q_(0, 'm')
-	for M in [m for m in np.linspace(1, 1.5, 3)]:
+	for M in [m for m in np.linspace(1, np.sqrt(5.93), 4)]:
 			beam_waist = Q_(3.24 / 2 / M, 'mm')
 
 			# Initialize lists for beam radius and radius of curvature
@@ -67,11 +67,14 @@ def rss_figure_8():
 			# Code is generating a reflected, shifted version, these numbers
 			# qualitatively fit what is happening, so the question is: What is
 			# causing our function to have this issue?
-			plt.plot(_lambda_range.magnitude, 2 * radius_list, label=f"M$^2$ = {M**2:.3}")		
+			index = N * ((Q_(589, 'nm') - _lambda_lower_bound) / (_lambda_upper_bound - _lambda_lower_bound)).magnitude // 1
+			min_rad = radius_list[int(index)]
+			plt.plot(_lambda_range.magnitude, 2 * radius_list, label=f"M$^2$ = {M**2:.3}. Min diameter: {2 * min_rad:.3}um")
+			print(2 * min_rad)
 			#plt.plot(_lambda_range.magnitude, 2 * roc_list)		
-	plt.title("Retinal Radius Variation with Wavelength")#, waist size %f %s" %(beam_waist.magnitude, beam_waist.units))
+	plt.title("Retinal Diameter Variation with Wavelength")#, waist size %f %s" %(beam_waist.magnitude, beam_waist.units))
 	plt.xlabel(f"wavelength, ({_lambda_range.units})")
-	plt.ylabel(f"retinal radius, ({retinal_rad.units})")
+	plt.ylabel(f"retinal diameter, ({retinal_rad.units})")
 	plt.legend()
 	plt.show()
 
@@ -603,20 +606,25 @@ def percent_err_calc():
 	Nominal_Rad_M1 = generate_radius(z0, eye_ROC, eye_length, 0, M)
 	Nominal_Rad_Mgt1 = generate_radius(z0, eye_ROC, eye_length, 0, 1.2)
 	
-	err_dict = {"z0": Delta_z0, "eye_ROC": Delta_eye_ROC, "eye_length": Delta_eye_length, "n_perc": Q_(0.01, '')}
+	err_dict 	= {"z0": Delta_z0, "eye-ROC": Delta_eye_ROC, "eye-length": Delta_eye_length, "n-perc": Q_(0.01, '')}
+	perc_err_dict = {"z0": [[], [], []], "eye-ROC": [[], [], []], "eye-length": [[], [], []], "n-perc": [[], [], []]}
 	err_vals = [err.magnitude for err in err_dict.values()]
 	adj_matrix = np.diag(err_vals)
 	
 	for label, adj_vector in zip(err_dict.keys(), adj_matrix):
 		e1, e2, e3, e4 = adj_vector
-		z0 			+ Q_(e1, Delta_z0.units)
-		eye_ROC 	+ Q_(e2, Delta_eye_ROC.units)
-		eye_length 	+ Q_(e3, Delta_eye_length.units)
-		e4
 		r_percent = generate_radius(z0 + Q_(e1, Delta_z0.units), eye_ROC + Q_(e2, Delta_eye_ROC.units), eye_length + Q_(e3, Delta_eye_length.units), e4, M)
 		with open(f"{label}.csv", 'w') as f:
-			writer = csv.writer(f, delimiter=' ')
+			writer = csv.writer(f, dialect='excel', delimiter=' ')
 			writer.writerows(zip(Nominal_Rad_M1[0], Nominal_Rad_M1[1], r_percent[1]))
+		perc_err_dict[label][0] = Nominal_Rad_M1[0,:]
+		perc_err_dict[label][1] = Nominal_Rad_M1[0,:]
+		perc_err_dict[label][2] = r_percent[1,:]
+	print(perc_err_dict)
+	with open(f"percErrAnalysis.csv", 'w') as f:
+		writer = csv.writer(f, delimiter=' ', dialect='excel')
+		writer.writerow(["Wavelength(nm)", "Nominal(um)"] + list(err_dict.keys()))
+		writer.writerows(zip(Nominal_Rad_M1[0], Nominal_Rad_M1[1], perc_err_dict["z0"][2], perc_err_dict["eye-ROC"][2], perc_err_dict["eye-length"][2], perc_err_dict["n-perc"][2]))
 
 
 @app.command()
@@ -627,7 +635,7 @@ def calc_err(A, B):
 	return 0.1
 	pass
 
-def generate_radius(z0, eye_ROC, eye_length, n_perc, M):#z0 = Q_(0, 'm'), eye_ROC = Q_(6.1, 'mm'), eye_length, n_perc=0, M=1): # OR error in B, C
+def generate_radius(z0, eye_ROC, eye_length, n_perc, M):# z0 = Q_(0, 'm'), eye_ROC = Q_(6.1, 'mm'), eye_length, n_perc=0, M=1): # OR error in B, C
 	"""
 	generates retinal radius as a function of wavelength given parameters
 	
@@ -642,6 +650,7 @@ def generate_radius(z0, eye_ROC, eye_length, n_perc, M):#z0 = Q_(0, 'm'), eye_RO
 		Description
 	
 	"""
+
 	# Wavelength range discretization
 	N = 100
 	_lambda_lower_bound = Q_(400, 'nm')
@@ -658,7 +667,7 @@ def generate_radius(z0, eye_ROC, eye_length, n_perc, M):#z0 = Q_(0, 'm'), eye_RO
 		# Physical parameters that depend on lambda
 		_ang_div 		 = ang_div(_lambda, beam_waist)
 		rayleigh_range 	 = z_R(_lambda, _ang_div)
-		reduced_eye_ABCD = reduced_eye(_lambda, eye_ROC, eye_length)
+		reduced_eye_ABCD = reduced_eye(_lambda, eye_ROC, eye_length=eye_length, perc_adj=n_perc)
 		# Initialize reduced complex beam parameter
 		q_0 = q_hat(z0, rayleigh_range)
 		# Propogate reduced complex beam parameter
@@ -673,3 +682,5 @@ def generate_radius(z0, eye_ROC, eye_length, n_perc, M):#z0 = Q_(0, 'm'), eye_RO
 	radius_list = np.array(radius_list)
 	roc_list = np.array(roc_list)
 	return np.array([[l.magnitude for l in _lambda_range], radius_list])
+
+
